@@ -1,24 +1,12 @@
-import { InputGroup } from "@/components/ui/input-group";
-import styles from "./page.module.css";
-import { Field } from "@/components/ui/field";
-import { Input } from "@chakra-ui/react";
-import Link from "next/link";
+import UserInfoModal from './components/ui/UserInfoModal'
+import { Flex } from '@chakra-ui/react'
 
 export default function Home() {
-  return (
-    <div className={styles.page}>
-      Login Page
-      <InputGroup>
-        <Field label="name">
-          <Input />
-        </Field>
-      </InputGroup>
-      <InputGroup>
-        <Field label="job title">
-          <Input />
-        </Field>
-      </InputGroup>
-      <Link href="characters">Submit</Link>
-    </div>
-  );
+    return (
+        <Flex m="4" direction="row" wrap="wrap" justifySelf="center" width="80%">
+            <Flex gap="4" direction="row" wrap="wrap" justifyContent="center" width="full">
+                <UserInfoModal />
+            </Flex>
+        </Flex>
+    )
 }
