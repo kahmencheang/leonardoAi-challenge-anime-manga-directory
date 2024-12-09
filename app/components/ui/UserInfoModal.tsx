@@ -32,6 +32,7 @@ export default function UserInfoModal() {
     const savedJobTitle = localStorage.getItem('jobTitle')
     const hasRequiredInfo = savedUsername && savedJobTitle
 
+    // we only want to trigger this once when the page loads
     useEffect(() => {
         if (!hasRequiredInfo) setDialogOpen(true)
         if (savedUsername && savedJobTitle) {
@@ -40,6 +41,7 @@ export default function UserInfoModal() {
             setSaveBtnText(SubmitButtonText.UPDATE)
             setDialogOpen(false)
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     const handleSubmit = () => {

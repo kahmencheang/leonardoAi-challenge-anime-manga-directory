@@ -5,7 +5,7 @@ import type { MediaPage } from '@/app/typings'
 import { useMemo } from 'react'
 import { useParams } from 'next/navigation'
 
-import { Flex, Heading, Spinner, Text } from '@chakra-ui/react'
+import { Flex, Heading, Spinner } from '@chakra-ui/react'
 import UserInfoModal from '@/app/components/ui/UserInfoModal'
 import MediaPageContent from '@/app/components/ui/PageContent'
 import PageSelectDropdown from '@/app/components/ui/PageSelectDropdown'
