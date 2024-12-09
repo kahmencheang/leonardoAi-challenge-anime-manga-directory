@@ -74,7 +74,7 @@ export default function UserInfoModal() {
             </Button>
 
             <DialogPositioner>
-                <DialogContent position="absolute" mt="50" color={'white'} width="100%">
+                <DialogContent position="absolute" mt="50" width="100%">
                     <DialogHeader
                         display="flex"
                         flexDirection="row"

@@ -39,7 +39,7 @@ export default function MediaInfoModal(data: MediaInfoModalProps) {
             </Button>
 
             <DialogPositioner>
-                <DialogContent position="absolute" mt="50" color={'white'} width="100%">
+                <DialogContent position="absolute" mt="50" width="100%">
                     <DialogHeader>
                         <Flex flexDirection="row" justifyContent="space-between" alignContent="center" mb="2">
                             <DialogTitle fontSize="3xl" alignContent="center">
