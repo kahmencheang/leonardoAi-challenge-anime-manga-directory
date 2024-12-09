@@ -28,9 +28,6 @@ export default function UserInfoModal() {
     const [username, setUsername] = useState('')
     const [jobTitle, setJobTitle] = useState('')
     const [saveBtnText, setSaveBtnText] = useState<SubmitButtonText>(SubmitButtonText.ENTER)
-    const savedUsername = localStorage.getItem('username')
-    const savedJobTitle = localStorage.getItem('jobTitle')
-    const hasRequiredInfo = savedUsername && savedJobTitle
 
     // we only want to trigger this once when the page loads
     useEffect(() => {
@@ -43,6 +40,12 @@ export default function UserInfoModal() {
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
+
+    if (typeof window === 'undefined') return <p>Window cannot be found.</p>
+
+    const savedUsername = localStorage.getItem('username')
+    const savedJobTitle = localStorage.getItem('jobTitle')
+    const hasRequiredInfo = savedUsername && savedJobTitle
 
     const handleSubmit = () => {
         localStorage.setItem('username', username)
